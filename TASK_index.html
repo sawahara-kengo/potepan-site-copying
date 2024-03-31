@@ -1,0 +1,263 @@
+<!DOCTYPE html> <!--HTMLの宣言-->
+<html lang="ja"> <!--言語の宣言-->
+
+<!--ここから｜webページの情報(設定)-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> 【課題】ポテパンキャンプ - Webエンジニア輩出No1プログラミングスクール</title>
+    <link rel="stylesheet" href="TASK_style.css">
+</head>
+<!--ここまで｜webページの情報(設定)-->
+
+<!-----------------------------------
+【自分のコード】
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <! -- webページの情報 -- >
+        <meta charset="UTF-8">
+        <title>課題｜サイト模写</title>
+        <link rel="stylesheet" href="TASK_style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+--------------------------------------->
+
+
+<!--ここから｜HTMLを書く-->
+<body class="first-view">
+    <!--ここから｜ヘッダー領域のエリア-->
+    <header class="menu_bar"> <!--headerタグで大枠の区域を分ける-->
+        
+        <!--ここから｜ヘッダー部分のコンテナ(コンテンツを配置するエリア)枠-->
+        <div class="header_container"> 
+            <!--ここから｜企業ロゴ-->
+            <a class="header_logo" href="/"> <!--"/"はホームページへのリンクを示す-->
+                <img class="header_logo_img" 
+                    src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/header-logo.png.webp" 
+                    alt="POTEPAN CAMP"> 
+                        <!--企業ロゴなので非表示の場合もロゴ記載の内容が望ましい-->
+            <!--ここまで｜企業ロゴ-->
+            </a>
+
+<!-----------------------------------
+【自分のコード】
+
+    <body>
+        <!　-- header｜企業ロゴとメニューアイテムのエリアここから --　>
+        <div class="header">    
+
+            <!　-- 企業ロゴ --　>
+            <a href="#企業トップ">
+                <img class="logo" src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/header-logo.png.webp" 
+                    alt="企業ロゴ">
+            </a>
+--------------------------------------->
+
+            <!--ここから｜ヘッダーのメニューエリア-->
+            <nav class="header_nav"> <!--ナビゲーションリンクを囲うためのタグ。SEOにも良い-->
+                <ul class="header_nav_list">
+                    <li class="header_nav_list_item"> <!--itemとlinkはまとめて同じクラス名をつける-->
+                        <a class="header_nav_list_item_link" 
+                            href="https://camp.potepan.com/content">
+                                <span>CONTENT</span>
+                                <span>学習内容</span>
+                        </a>
+                    </li>
+                    <li class="header_nav_list_item">
+                        <a class="header_nav_list_item_link" 
+                            href="https://camp.potepan.com/interview">
+                                <span>INTERVIEW</span>
+                                <span>受講者の声</span>
+                        </a>
+                    </li>
+                    <li class="header_nav_list_item">
+                        <a class="header_nav_list_item_link" 
+                            href="https://camp.potepan.com/faq">
+                                <span>FAQ</span>
+                                <span>よくある質問</span>
+                        </a>
+                    </li>
+                    <li class="header_nav_list_item">
+                        <a class="header_nav_list_item_link" 
+                            href="https://camp.potepan.com/recruit">
+                                <span>RECRUIT</span>
+                                <span>採用企業様へ</span>
+                        </a>
+                    </li>
+                    <li class="header_nav_list_item">
+                        <a class="header_nav_list_item_link" 
+                            href="https://camp.potepan.com/training">
+                                <span>TRAINING</span>
+                                <span>企業研修</span>
+                        </a>
+                    </li>
+                    <li class="header_nav_list_item">
+                        <a class="header_nav_list_item_button" 
+                            href="https://camp.potepan.com/faq"> <!--ボタンのみ異色のためクラス名を分ける-->
+                                無料カウンセリング</a>
+                    </li>
+                </ul>
+            </nav>
+            <!--ここまで｜ヘッダーのメニューエリア-->
+        </div>
+        <!--ここまで｜ヘッダー部分のコンテナ枠-->
+    </header>
+    <!--ここまで｜ヘッダー領域のエリア-->
+<!-----------------------------------
+【自分のコード】
+            <!　-- メニューアイテム一式 ここから --　>
+            <ul class="header_list">
+               
+                <!　-- 各メニューアイテム ここから --　>
+                <li class="contet">
+                    <a href="#学習内容">
+                        CONTENT<br>
+                        学習内容
+                    </a>
+                </li>
+                <li class="interview">
+                    <a href="#受講生の声">
+                        INTERVIEW<br>
+                        受講生の声
+                    </a>
+                </li>
+                <li class="FAQ">
+                    <a href="#よくある質問">
+                        FAQ<br>
+                        よくある質問
+                    </a>
+                </li>
+                <li class="recruit">
+                    <a href="採用企業様へ">
+                        RECRUIT<br>
+                        採用企業様へ
+                    </a>
+                </li>
+                <li class="training">
+                    <a href="#企業研修">
+                        TRAINING<br>
+                        企業研修
+                    </a>
+                </li>
+                <li class="counseling_application">
+                    <a href="#カウンセリング申し込み">
+                        無料カウンセリング
+                    </a>
+                </li>
+                <!　-- 各メニューアイテム ここまで --　>
+
+            </ul>
+            <!　-- メニューアイテム一式 ここまで --　>
+
+        </div>
+        <!　-- header｜企業ロゴとメニューアイテムのエリア ここまで --　>
+
+--------------------------------------->
+
+<!--ここから｜メインエリア-->
+    <main class="first_view">
+        <!--ここから｜ファーストビューの画像エリア-->
+        <div class="first_view_back_img">
+            <img class="top_left_img" 
+                src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/left-rectangle.svg" 
+                alt="左上の三角">
+            <img class="line_img" 
+                src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/fill-rectangle.svg" 
+                alt="線画の楕円">
+            <img class="main_visual" 
+                src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/main-visual.webp" 
+                alt="メインビジュアル">
+            <img class="bottom_right_img" 
+                src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/right-rectangle.svg" 
+                alt="右下の三角">
+        </div>
+        <!--ここまで｜ファーストビューの画像エリア-->
+
+        <!--ここから｜メインコンテンツエリア-->
+        <div class="first_view_content">
+            <h2 class="first_view_content_title">
+                AI搭載カリキュラムと<br>
+                豊富な提携求人で<br>
+                最速でWebエンジニアに
+                <img class="first_view_content_popimg" 
+                src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/badge.svg" 
+                alt="Webエンジニア輩出No.1"> 
+            </h2>
+            <a class="first_view_content_button" 
+                href="https://camp.potepan.com/contact">
+                まずは無料カウンセリングへ 
+            </a>
+            <p class="first_view_content_subtext">
+                ※ショッパーズアイ「プログラミングスクール10社を対象にしたサイト比較イメージ調査<br>
+                （2020 年 5 月 22 日～25 日）」より全国の22～49歳の男女691名へのインターネット調査
+            </p>
+        </div>
+        <!--ここまで｜メインコンテンツエリア-->
+
+    </main>
+<!--ここまで｜メインエリア-->
+
+
+            
+
+
+<!-----------------------------------
+【自分のコード】
+
+        <!　-- firstview｜トップページのファーストビュー ここから --　>
+        <div class="first_view">
+
+            <!　-- 丸ポップ画像 -- >
+            <img class="pop_image" src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/badge.svg" 
+                alt="輩出No1丸ポップアップ">
+
+            <! -- 背景画像 -- >
+            <img class="top_left_image" src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/left-rectangle.svg" 
+                alt="左上の三角">
+
+            <img class="main_image" src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/main-visual.webp" 
+                alt="背景のお兄さん">
+            
+            <img class="top_left_image" src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/left-rectangle.svg" 
+                alt="左上の三角">
+
+            <img class="line_image" src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/fill-rectangle.svg" 
+                alt="線の楕円">
+
+            <img class="bottom_right_image" src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/right-rectangle.svg" 
+                alt="右下の三角">
+
+            <! -- ファーストビューのテキストエリア ここから -- >
+            <div class="first-view_texts">
+                <! -- キャッチコピー文 -- >
+                <h2 class="main_title">
+                    AI搭載カリキュラムと<br>
+                    豊富な提携求人で<br>
+                    最速でWebエンジニアに
+                </h2>
+
+                <! -- カウンセリング申し込みページ遷移ボタン -- >
+                <div class="first-view_counseling_application">
+                    <a href="#カウンセリングURL">
+                        まずは無料カウンセリングへ
+                    </a>
+                </div>
+
+                <! -- 丸ポップの注釈文 -- >
+                <p class="annotation">
+                    ※ショッパーズアイ「プログラミングスクール10社を対象にしたサイト比較イメージ調査<br>
+                    （2020 年 5 月 22 日～25 日）」より全国の22～49歳の男女691名へのインターネット調査
+                </p>
+            </div>
+            <! -- ファーストビューのテキストエリア ここまで -- >
+
+        </div>
+        <! -- firstview｜トップページのファーストビュー ここまで -- >
+
+    </body>
+</html>
+--------------------------------------->
+</body>
+<!--ここまで｜HTMLを書く-->

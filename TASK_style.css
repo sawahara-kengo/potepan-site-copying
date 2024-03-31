@@ -1,0 +1,401 @@
+/*ここから｜HTML全体の設定エリア*/
+html {
+    -webkit-text-size-adjust: 100%;
+        /*モバイルデバイス上で表示された際にテキストサイズを調整するために設定*/
+            /*特にiOSやAndroidなどのwebkitベースのブラウザで利用される*/
+        /*今回はデフォルトのテキストを保持するために設定*/
+}
+/*ここまで｜HTML全体の設定エリア*/
+
+/*ここから｜body全体の設定エリア*/
+body {
+    color: #333; /*目に優しい黒*/
+    font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3",
+                    "Hiragino Kaku Gothic Pro","メイリオ",Meiryo,
+                    "ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+                        /*表示されるフォントを指定。順番に試行される。*/
+    font-size: 14px;
+    font-weight: 500;
+    -webkit-font-smoothing:antialiased; 
+        /*webkitベースのブラウザにおいてテキストのアンチエイリアス処理を行うため設定*/
+        /*フォントのエッジが滑らかに表示され、小さいテキストが読みやすくなる*/
+            /*webkitベースのブラウザ＝ChromeやSafariなど*/
+    margin: 0;
+}
+/*ここまで｜body全体の設定エリア*/
+
+/*ここから｜ヘッダーエリア*/
+.menu_bar {
+    background-color: #fff;
+    box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.05);
+    /*  X軸 Y軸 ぼかし 拡散　　　　色*/
+    height: 70px;
+    align-items: center;
+}
+/*ここまで｜ヘッダーエリア*/
+
+/*ここから｜ヘッダーコンテナの設定エリア*/
+.header_container {
+    display: flex; 
+        /*header_containerの子要素をフレックスアイテムにするために設定*/
+            /*header_containerをフレックスコンテナにすることと同義*/
+        /*子要素の配置やサイズ調整、配列が容易になる*/
+
+    justify-content: space-between;
+        /*フレックスコンテナ内のアイテムを両端に寄せつつ均等な間隔で配置するために設定*/
+    
+    max-width: 100%;
+        /*要素の最大幅を親要素の幅に依存して100％に制限するために設定
+            ＝ 要素が親要素よりも大きくならない。例)画像が画面サイズを超えて拡大しない*/
+
+    position: relative;
+        /*通常の配置位置から少し動かす場合に使用される。のちにtopやleftなどでズラす値を指定*/
+            /*今回はのちのmainエリアに対する祖先要素となるために設定
+                ＝ absoluteを使用できるようにするための設定*/
+    margin: 0 36px;
+}
+/*ここまで｜ヘッダーコンテナの設定エリア*/
+/*-----------------------------------------------
+【自分のコード】
+
+/ * ヘッダーの装飾エリア ここから * /
+
+    / * ロゴとヘッダーリストを横並びにする * /
+    .header {
+        z-index: 10;
+        position: relative;
+        background-color: white;
+        display: flex;
+    }
+-------------------------------------------------*/
+
+/*ここから｜ヘッダー_企業ロゴの設定エリア*/
+.header_logo {
+    display: flex;
+    align-items: center;
+}
+
+.header_logo:hover {
+    opacity: 0.8;
+}
+
+.header_logo_img {
+    display: block;
+    height: 20px;
+    width: auto;
+    border: 0; /*要素の境界線を消去する*/
+}
+/*ここまで｜ヘッダー_企業ロゴの設定エリア*/
+/*-----------------------------------------------
+【自分のコード】
+    .logo {
+        margin-top: 17px;
+        margin-left: 28px;
+        margin-bottom: 17px;
+        height: 20px;
+    }
+-------------------------------------------------*/
+
+/*ここから｜ヘッダーメニュー(リスト)の設定エリア*/
+
+/*----ここから｜リストコンテナの設定*/
+.header_nav_list {
+    display: flex;
+    align-items: center;/*フレックスコンテナ内でアイテムを中央に配置するために設定*/
+    justify-content: space-between;/*両端に寄せつつ均等配置するため設定*/
+    list-style: none;/*リストの黒丸を消すため設定*/
+    margin: 0;/*要素にいて全方向の外側余白をなくすため設定*/
+    padding: 0;/*要素にいて全方向の内側余白をなくすため設定*/
+    box-sizing: border-box;
+        /*paddingやborderの厚さも含めて要素の幅・高さが設定されるようになる＝レイアウトの計算がしやすくなる*/
+            /*例えばwidth300pxと設定した場合、padding10px,border5pxなどは300pxの中に含まれる*/
+                /*デフォルトはcontent-boxで、paddingやborderは幅と高さに含まれない*/
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+        /*ブロックレベル要素における上部のマージンを設定する*/
+            /*1emは該当要素のフォントサイズに相当する空間を余白として追加することを意味する*/
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+        /*要素のインライン方向(左右)のマージンを設定する*/
+            /*[start]webページが左から右に読まれる言語(日本語や英語など)の場合は左マージン
+                右から左に読まれる言語(アラビア語など)の場合は右マージンになる*/
+                    /*国際化されたwebコンテンツを扱う際に役立つ*/
+    padding-inline-start: 40px;
+        /*要素のインライン開始側(通常はテキストの開始位置)にpaddingを設定する*/
+            /*要素の内容とその境界に指定された大きさのスペースを作ることができる*/
+}
+/*----ここまで｜リストコンテナの設定*/
+
+/*----ここから｜リストアイテムの設定*/
+.header_nav_list_item {
+    margin-right: 45px;/*アイテム間の右側マージンを設定*/
+    text-align: center;/*テキストを中央揃えで表示*/
+}
+
+.header_nav_list_item:hover {
+    opacity: 0.8;
+}
+
+span {
+    display: block;/*各spanをブロックにすることで縦に並ぶようになる*/
+    font-weight: 700;
+    text-align: center;
+}
+
+span:first-child {
+    font-family: "Lato",sans-serif;
+    font-size: 11px;
+    line-height: 14.4px;
+}
+
+span:last-child {
+    font-size: 10px;
+}
+/*----ここまで｜リストアイテムの設定*/
+
+/*----ここから｜リストアイテム内リンクの設定*/
+.header_nav_list_item_link {
+    display: block;/*要素をブロックレベル要素として表示するために設定＝新しい行で始まり、利用可能な全幅を占める*/
+    text-decoration: none;/*リンクの下線を消す*/
+    color: #333;
+    font-weight: bold;
+}
+/*----ここまで｜リストアイテム内リンクの設定*/
+
+/*----ここから｜リストアイテム内ボタンの設定*/
+.header_nav_list_item_button {
+    align-items: center;
+    background-color: #f79214;
+    border: none;/*要素の境界線をなくす*/
+    border-radius: 38px;/*角を丸くする*/
+    color: #fff;
+    display: flex;/*フレックスコンテナにする*/
+    flex-direction: column;
+    font-weight: 700;
+    justify-content: center;/*ボタン(フレックスコンテナ内)の文字を上下中央揃えにする*/
+    text-decoration: none;/*リンクの下線を消す*/
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    height: 40px;    
+    padding: 0 10px;
+}
+
+.header_nav_list_item_button:hover {
+    opacity: 0.8;
+}
+/*----ここまで｜リストアイテム内ボタンの設定*/
+
+/*ここまで｜ヘッダーメニュー(リスト)の設定エリア*/
+/*-----------------------------------------------
+【自分のコード】
+
+    / * リストの内容 * /
+    .header_list {
+        background-color: white;
+        right: 0;
+        font-size: 12px;
+        font-weight: bold;
+        list-style: none; / * リストの黒丸を取り除く * /
+        display: flex; / * リストの各アイテムを横並びにする * /
+        margin: 0 0 0 auto ;
+        padding: 20px ;
+    }
+
+    / * リストの各アイテム間隔を調整 * /
+    .header_list li {
+        text-align: center;
+        margin-right: 40px;
+    }
+
+    / * リストの各アイテムを黒のテキスト状態にする * /
+    .header_list a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .counseling_application {
+        margin-top: 7px;
+    }
+
+/ * ヘッダーの装飾エリア ここまで * /
+-------------------------------------------------*/
+
+
+/*ここから｜メインエリアの装飾*/
+main {
+    display: block;/*要素をブロックレベル要素とする*/
+    position: relative;/*absoluteを使用できるようにする*/
+    height: 740px;/*mainエリアの高さを指定(今回の課題では過剰)*/
+}
+
+/*----ここから｜背景画像の装飾*/
+.first_view_back_img {
+    z-index: -1;/*レイヤーを下げて背景とする*/
+}
+
+    /*----ここから｜左上三角の装飾*/
+.top_left_img {
+    position: absolute;
+    top: -70px;
+    left: 0;
+    z-index: -2;
+}
+    /*----ここまで｜左上三角の装飾*/
+
+    /*----ここから｜線画楕円の装飾*/
+.line_img {
+    position: absolute;
+    top: 84px;
+    left: -70px;
+    z-index: -2;
+}
+    /*----ここから｜線画楕円の装飾*/
+
+    /*----ここから｜メインビジュアルの装飾*/
+.main_visual {
+    position: absolute;
+    top: -70px;
+    right: 0;
+    width: 775px;
+    z-index: -2;
+}
+    /*----ここまで｜メインビジュアルの装飾*/
+
+    /*----ここから｜右下三角の装飾*/
+.bottom_right_img {
+    position: absolute;
+    right: 0;
+    bottom: 70px;
+}
+    /*----ここまで｜右下三角の装飾*/
+/*----ここまで｜背景画像の装飾*/
+
+/*----ここから｜メインコンテンツの装飾*/
+    /*----ここから｜メインコンテンツコンテナの装飾*/
+.first_view_content {
+    position: relative;/*丸ポップ配置用*/
+    max-width: 1040px;
+    margin-left: 200px;
+    margin-right: auto;
+    padding-top: 180px;/*テキスト配置を下げる*/
+    width: fit-content;
+}
+    /*----ここまで｜メインコンテンツコンテナの装飾*/
+
+    /*----ここから｜メインコンテンツの装飾*/
+.first_view_content_title {
+    color: #333;
+    font-family: "Lato",sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 63px;/*行の高さを指定*/
+    margin-bottom: 16px;
+}
+
+.first_view_content_popimg {
+    position: absolute;
+    top: 110px;
+    left: 430px;
+}
+
+.first_view_content_button {
+    background-color: #f79214;
+    border: none;
+    border-radius: 38px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;/*ボタンの幅をコンテナの幅分に広げる*/
+    flex-direction: column;/*align-items:center;を有効にする*/
+    align-items: center;/*ボタンの中央にテキスト(リンク)を配置する*/
+    font-size: 16px;
+    font-weight: 700;/*700からbold*/
+    height: 64px;/*ボタンの縦幅を指定*/
+    justify-content: center;/*テキスト(リンク)をボタン内の上下中央揃えに配置する*/
+    text-decoration: none;
+    text-align: center;/*必要か分からず。。*/
+    width: 100%;/*親に対して100％の幅を占める(変化は見て取れず)*/
+    margin-bottom: 16px;/*下のサブテキストとの間を空ける*/
+}
+
+.first_view_content_button:hover {
+    opacity: 0.8;
+}
+
+.first_view_content_subtext {
+    font-size: 12px;
+    line-height: 16px;/*行の高さ指定*/
+}
+    /*----ここまで｜メインコンテンツの装飾*/    
+/*ここまで｜メインエリアの装飾*/
+
+
+/*-----------------------------------------------
+【自分のコード】
+
+/ * ファーストビューの装飾エリア ここから * /
+    .top_left_image {
+        position: absolute;
+        top: -10px;
+        left: 0;
+    }
+
+    .pop_image {
+        position: absolute;
+        top: 80px;
+        margin: 100px auto 0 630px;
+        z-index: 9;
+    }
+
+    .main_image {
+        position: absolute;
+        top: -10px;
+        right: 0;
+        height: 650px;
+        z-index: 5;
+    }
+
+    .line_image {
+        position: absolute;
+        top: 147px;
+        left: -80px;
+        z-index: 1;
+    }
+
+    .bottom_right_image {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+ここまで画像-------------------------------------------------*/
+
+/*ここからメインコンテンツ-----------------------------------------------
+
+    .first-view_texts {
+        position: absolute;
+        top: 390px;
+        margin-left: 200px;
+        margin-top: -135px;
+    }
+
+    .main_title {
+        z-index: 8;
+        font-size: 40px;
+    }
+
+    .first-view_counseling_application {
+        margin-left: 130px;
+        margin-bottom: 40px;
+        border: 5px orange;
+    }
+
+    .first-view_counseling_application a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .annotation {
+        font-size: 11px;
+    }
+/ * ファーストビューの装飾エリア ここまで * /
+-------------------------------------------------*/
